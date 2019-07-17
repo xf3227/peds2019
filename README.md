@@ -1,11 +1,3 @@
-<link href="style.css" rel="stylesheet"></link>
-<style>
-    ul {
-        list-style-type: none;
-        margin-left: 40px;
-    }
-</style>
-
 # Quantifying the nativeness of antibody using LSTM
 
 One Paragraph of project description goes here
@@ -27,8 +19,14 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 ## How to use
 
 These instructions will help you properly configure and use the tool either through function-call or command-line.
+
+## Documentation
+
+**`ablstm.ModelLSTM.__init__()`**
+> Initializes an LSTM model with the given paramters.
+
 1. `embedding_dim`: *int, optional, default is 64*
->>> Embedding layer dimensions.
+>> Embedding layer dimensions.
 
 2. `hidden_dim`: *int, optional, default is 64*
     Hiddden layer dimensions.
