@@ -18,7 +18,7 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 
 ## How to use
 
-These instructions will help you properly configure and use the tool either through function-call or command-line. You can go to [Documentation](#documentation) section 
+These instructions will help you properly configure and use the tool either through function-call or command-line. For detailed usage of the parameters, you may refer to [Documentation](#documentation) section. 
 
 ## <a name="documentation"></a>Documentation
 
