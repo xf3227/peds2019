@@ -43,9 +43,26 @@ human_tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
 
 To save & load:
 ```python3
-model.save('./saved_models/tmp/model_tmp.npy')
+model.save(fn='./saved_models/tmp/model_tmp.npy')
 model_loaded = ModelLSTM()
-model_loaded.load('./saved_models/tmp/model_tmp.npy')
+model_loaded.load(fn='./saved_models/tmp/model_tmp.npy')
+```
+
+### Command line
+
+To start a fresh training:
+```bash
+$ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp
+```
+
+To load a saved model and resume training:
+```bash
+$ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp -l ./saved_models/tmp/model_tmp.npy
+```
+
+To use a configuration file other than ablstm.config:
+```bash
+$ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp -c ./ablstm_new.config
 ```
 
 ## <a name="documentation"></a>Documentation
