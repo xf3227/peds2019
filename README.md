@@ -22,26 +22,26 @@ These instructions will help you properly configure and use the tool either thro
 
 ### Function call
 
-To initialize model
+To initialize model:
 ```python3
 from ablstm import ModelLSTM
 model = ModelLSTM(embedding_dim=64, hidden_dim=64, device='cpu', gapped=True, fixed_len=True)
 ```
 
-To fit model (w/o saving)
+To fit model (without saving):
 ```python3
 trn_fn = './data/sample/human_train.txt'
 vld_fn = './data/sample/human_val.txt'
 model.fit(trn_fn=trn_fn, vld_fn=vld_fn, n_epoch=10, trn_batch_size=128, vld_batch_size=512, lr=.002, save_fp=None)
 ```
 
-To evaluate the testing sequences by using the train model
+To score the testing sequences:
 ```python3
 human_tst_fn = './data/sample/human_test.txt'
 human_tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
 ```
 
-To save & load
+To save & load:
 ```python3
 model.save('./saved_models/tmp/model_tmp.npy')
 model_loaded = ModelLSTM()
@@ -83,7 +83,7 @@ Parameters:
 >> Batch size during validation. `-1` means whole batch.
 6. `lr`: *float, default is 0.02*
 >> Learning rate. The fitting process uses Adam algorithm for optimization.
-7. `save_fp`: *str, optional*
+7. `save_fp`: *str, optional, default is None*
 >> Path to save models. `None` or `""` means training without saving. If a valid path is given, model will be saved under the path after each epoch as long as the validation performance is better than the past.
 
 #### `ablstm.ModelLSTM.eval()`
