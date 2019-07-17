@@ -58,6 +58,21 @@ Parameters:
 7. `save_fp`: *str, optional*
 >> Path to save models. `None` or `""` means training without saving. If a valid path is given, model will be saved after each epoch as long as the validation performance is better than the past.
 
+#### `ablstm.ModelLSTM.eval()`
+> scores the given sequences.
+
+Parameters:
+
+1. `fn`: *str*
+>> Data file for evaluation.
+2. `batch_size`: *int, default is 512*
+>> Batch size. -1 means whole batch.
+
+Returns:
+
+1. `scores`: *NumPy ndarray*
+>> 1-D NumPy array consists of all sequences' scores. Order is preserved.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
