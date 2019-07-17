@@ -40,7 +40,7 @@ Parameters:
 >> Indicate whether the input sequences contains gaps. A gap is always signified by `"-"`.    
     
 5. `fixed_len`: *bool, optional, default is True*
->> Indicate whether the input sequences share equal length. It can be set `False` without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it `True` will help speed up the computation as well.
+>> Indicate whether the input sequences share equal length. It can be set `False` without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it `True` will help speed up the computation significantly.
 
 ## Contributing
 
