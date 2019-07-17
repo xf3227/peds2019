@@ -22,7 +22,7 @@ These instructions will help you properly configure and use the tool either thro
 
 ## Documentation
 
-**`ablstm.ModelLSTM.__init__()`**
+#### `ablstm.ModelLSTM.__init__()`
 > Initializes an LSTM model with the given paramters.
 
 Parameters:
@@ -38,7 +38,7 @@ Parameters:
 5. `fixed_len`: *bool, default is True*
 >> Indicate whether the input sequences share equal length. It can be set `False` without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it `True` will help speed up the computation significantly.
 
-**`ablstm.ModelLSTM.fit()`**
+#### `ablstm.ModelLSTM.fit()`
 > Fit the model via the given training and validation data.
 
 Parameters:
