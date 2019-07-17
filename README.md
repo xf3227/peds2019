@@ -16,17 +16,17 @@ The tool was developped based on the following dependencies:
 
 Please note that the dependencies may require Python 3.6 or greater. It is recommemded to install and maintain all packages by using [`conda`](https://www.anaconda.com/) or [`pip`](https://pypi.org/project/pip/). For the installation of GPU accelerated PyTorch, additional effort may be required. Please check the official websites of [PyTorch](https://pytorch.org/get-started/locally/) and [CUDA](https://developer.nvidia.com/cuda-downloads) for detailed instructions.
 
-### Installing
-
-After resolving all dependencies, you can use the tool without further installation.
-
 ## How to use
 
 These instructions will help you properly configure and use the tool either through function-call or command-line.
 
 ### Data format
 
-All antibody protein sequences must be stored in plain-text format. A sequence consists of 20 amino acid symbol letters along with `"-"` to indicate gap. Sequences are deliminated by one single line-break. Please do not include spaces or extra line-breaks. The following lines show what the data is supposed to look like. Also, you can find sample data files under `<tool root>/data/sample/`
+All antibody protein sequences must be stored in plain-text format. A sequence consists of 20 amino acid symbol letters along with `"-"` to indicate gap. Sequences are deliminated by one single line-break. Please do not include spaces or extra line-breaks. You can find sample data files under `<tool root>/data/sample/`.
+
+**Example**
+
+5 segments from human antibody's HV region.
 
 ```
 -QVQLVQS-GAEVKKPGSSVKVSCTTSG-GTFSS-----FVINWMRQAPGQGLGWRGGIMPV---
@@ -36,33 +36,31 @@ All antibody protein sequences must be stored in plain-text format. A sequence c
 -QVQLQES-GPGLMKPSGTLSLTCDVSG-ASISN----TNWWGWVRQPPGLGLEWIGEIHH----
 ```
 
-If you want to generate data using Windows notepad, please be careful what the underlying line-break symbol is. 
+## Documentation
 
-### Break down into end to end tests
+**`ablstm.ModelLSTM.__init__()`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize an LSTM model with the given paramters.
 
-Explain what these tests test and why
+Parameters:
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+1. `embedding_dim`: *int, optional, default is 64*<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedding layer dimensions.
+    
+    
+2. `hidden_dim`: *int, optional, default is 64*<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hiddden layer dimensions.
+    
+    
+3. `device`: *str, optional, default is 'cpu'*<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Device that the model will be mounted on.
+    
+    
+4. `gapped`: *bool, optional, default is True*<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicate whether the input sequences contains gaps.
+    
+    
+5. `fixed_len`: *bool, optional, default is True*<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicate whether the input sequences share equal length.
 
 ## Contributing
 
