@@ -80,7 +80,7 @@ Parameters:
 1. `device`: *str, default is "cpu"
 >> Device to mount.
 
-#### `ablstm.ModelLSTM.save()`**
+#### `ablstm.ModelLSTM.save()`
 > Save model.
 
 Parameters:
