@@ -20,7 +20,7 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 
 These instructions will help you properly configure and use the tool either through function-call or command-line.
 1. `embedding_dim`: *int, optional, default is 64*
-    Embedding layer dimensions.
+ ***Embedding layer dimensions.
 
 2. `hidden_dim`: *int, optional, default is 64*
     Hiddden layer dimensions.
