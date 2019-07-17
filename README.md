@@ -73,6 +73,34 @@ Returns:
 1. `scores`: *NumPy ndarray*
 >> 1-D NumPy array consists of all sequences' scores. Order is preserved.
 
+#### `ablstm.ModelLSTM.to()`
+> Assign device.
+
+Parameters:
+1. `device`: *str, default is "cpu"
+>> Device to mount.
+
+#### `ablstm.ModelLSTM.save()`**
+> Save model.
+
+Parameters:
+
+1. `fn`: *str*
+>> Save file name.
+
+#### `ablstm.ModelLSTM.load()`
+> Load model from the given file. Please note that when `load()` method is invoked, all parameters will be overloaded except `device`. You may call `ablstm.ModelLSTM.to()` method to switch among different devices.
+
+Parameters:
+
+1. `fn`: *str*
+> Model file name.
+
+Returns:
+
+1. `model`: *ablstm.ModelLSTM*
+> Loaded model.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
