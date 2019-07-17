@@ -18,9 +18,9 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 
 ## How to use
 
-These instructions will help you properly configure and use the tool either through function-call or command-line.
+These instructions will help you properly configure and use the tool either through function-call or command-line. You can go to [Documentation](#documentation) section 
 
-## Documentation
+## <a name="documentation"></a>Documentation
 
 #### `ablstm.ModelLSTM.__init__()`
 > Initializes an LSTM model with the given paramters.
