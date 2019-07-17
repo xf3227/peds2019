@@ -27,20 +27,36 @@ These instructions will help you properly configure and use the tool either thro
 
 Parameters:
 
-1. `embedding_dim`: *int, optional, default is 64*
+1. `embedding_dim`: *int, default is 64*
 >> Embedding layer dimensions.
-
-2. `hidden_dim`: *int, optional, default is 64*
+2. `hidden_dim`: *int, default is 64*
 >> Hiddden layer dimensions.
-    
-3. `device`: *str, optional, default is 'cpu'*
+3. `device`: *str, default is 'cpu'*
 >> Device that the model will be mounted on. If GPU is available and CUDA is properly installed, you can assign `"cuda:0"` (or `"cuda:<DEVICE_INDEX>"` if you have more GPUs) that will greatly accelerate training and evaluation process.   
-    
-4. `gapped`: *bool, optional, default is True*
->> Indicate whether the input sequences contains gaps. A gap is always signified by `"-"`.    
-    
-5. `fixed_len`: *bool, optional, default is True*
+4. `gapped`: *bool, default is True*
+>> Indicate whether the input sequences contains gaps. A gap is always signified by `"-"`.
+5. `fixed_len`: *bool, default is True*
 >> Indicate whether the input sequences share equal length. It can be set `False` without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it `True` will help speed up the computation significantly.
+
+**`ablstm.ModelLSTM.fit()`**
+> Fit the model via the given training and validation data.
+
+Parameters:
+
+1. `trn_fn`: *str*
+>> Data file for training.
+2. `vld_fn`: *str*
+>> Data file for validation.
+3. `n_epoch`: *int, default is 10*
+>> Number of epochs.
+4. `trn_batch_size`: *str, default is 128*
+>> Batch size during training. `-1` means whole batch.
+5. `vld_batch_size`: *str, default is 512*
+>> Batch size during validation. `-1` means whole batch.
+6. `lr`: *float, default is 0.02*
+>> Learning rate. The fitting process uses Adam algorithm for optimization.
+7. `save_fp`: *str, optional*
+>> Path to save models. `None` or `""` means training without saving. If a valid path is given, model will be saved after each epoch as long as the validation performance is better than the past.
 
 ## Contributing
 
