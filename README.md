@@ -25,20 +25,22 @@ These instructions will help you properly configure and use the tool either thro
 **`ablstm.ModelLSTM.__init__()`**
 > Initializes an LSTM model with the given paramters.
 
+Parameters:
+
 1. `embedding_dim`: *int, optional, default is 64*
 >> Embedding layer dimensions.
 
 2. `hidden_dim`: *int, optional, default is 64*
-    Hiddden layer dimensions.
+>> Hiddden layer dimensions.
     
 3. `device`: *str, optional, default is 'cpu'*
-    Device that the model will be mounted on. If GPU is available and CUDA is properly installed, you can assign "cuda:0" (or "cuda:<DEVICE_INDEX>" if you have more GPUs) that will greatly accelerate training and evaluation process.   
+>> Device that the model will be mounted on. If GPU is available and CUDA is properly installed, you can assign `"cuda:0"` (or `"cuda:<DEVICE_INDEX>"` if you have more GPUs) that will greatly accelerate training and evaluation process.   
     
 4. `gapped`: *bool, optional, default is True*
-    Indicate whether the input sequences contains gaps. A gap is always signified by "-".    
+>> Indicate whether the input sequences contains gaps. A gap is always signified by `"-"`.    
     
 5. `fixed_len`: *bool, optional, default is True*
-    Indicate whether the input sequences share equal length. It can be set False without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it True will help speed up the computation as well.
+>> Indicate whether the input sequences share equal length. It can be set `False` without any issue in all circumstances, but when the sequence lengths are assured to be the same, setting it `True` will help speed up the computation as well.
 
 ## Contributing
 
