@@ -22,6 +22,8 @@ These instructions will help you properly configure and use the tool either thro
 
 ### Function call
 
+#### Example
+
 To initialize model:
 ```python3
 from ablstm import ModelLSTM
@@ -37,8 +39,8 @@ model.fit(trn_fn=trn_fn, vld_fn=vld_fn, n_epoch=10, trn_batch_size=128, vld_batc
 
 To score the testing sequences:
 ```python3
-human_tst_fn = './data/sample/human_test.txt'
-human_tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
+tst_fn = './data/sample/human_test.txt'
+tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
 ```
 
 To save & load:
@@ -50,6 +52,33 @@ model_loaded.load(fn='./saved_models/tmp/model_tmp.npy')
 
 ### Command line
 
+#### Configuration file
+
+Since neural network may have numerous parameters to configure, it may appear excessively verbose if we pass all of them by commands. Most of the model parameters, therefore, are stored within `<project_root>/ablstm.config` in XML format. The structure and the tag names exactly follow their corresponding Python class definition. Here is a sample XML configuration file.
+
+```xml
+<?xml version="1.0"?>
+<ablstm>
+    <__init__>
+        <embedding_dim>64</embedding_dim>
+        <hidden_dim>64</hidden_dim>
+        <gapped>True</gapped>
+        <fixed_len>True</fixed_len>
+    </__init__>
+    <fit>
+        <n_epoch>8</n_epoch>
+        <trn_batch_size>128</trn_batch_size>
+        <vld_batch_size>512</vld_batch_size>
+        <lr>0.002</lr>
+    </fit>
+    <eval>
+        <batch_size>512</batch_size>
+    </eval>
+</ablstm>
+```
+
+#### Example
+
 To start a fresh training:
 ```bash
 $ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp
@@ -60,7 +89,7 @@ To load a saved model and resume training:
 $ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp -l ./saved_models/tmp/model_tmp.npy
 ```
 
-To use a configuration file other than ablstm.config:
+To use a configuration file other than `<project_root>/ablstm.config`:
 ```bash
 $ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp -c ./ablstm_new.config
 ```
