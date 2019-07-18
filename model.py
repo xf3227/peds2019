@@ -20,7 +20,7 @@ class ModelLSTM:
         self.nn = LSTM_Bi(in_dim, embedding_dim, hidden_dim, out_dim, device, fixed_len)
         self.to(device)
         
-    def fit(self, trn_fn, vld_fn, n_epoch=100, trn_batch_size=128, vld_batch_size=512, lr=.2, save_fp=None):
+    def fit(self, trn_fn, vld_fn, n_epoch=10, trn_batch_size=128, vld_batch_size=512, lr=.002, save_fp=None):
         # loss function and optimization algorithm
         loss_fn = torch.nn.NLLLoss()
         op = torch.optim.Adam(self.nn.parameters(), lr=lr)
