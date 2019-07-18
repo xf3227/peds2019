@@ -26,9 +26,10 @@ These instructions will help you properly configure and use the tool either thro
 
 ### Data format
 
-All antibody protein sequences must be stored in plain-text format. A sequence consists of 20 amino acid symbol letters along with `"-"` to indicate gap. Sequences are deliminated by one single line-break. Please do not include spaces or extra line-breaks. Here provides an example. Also, you can find sample data files under `<tool_root>/data/sample/`
+All antibody protein sequences must be stored in plain-text format. A sequence consists of 20 amino acid symbol letters along with `"-"` to indicate gap. Sequences are deliminated by one single line-break. Please do not include spaces or extra line-breaks. You can find sample data files under `<tool_root>/data/sample/`
 
 **Example**
+Here provides an example:
 ```
 -QVQLVQS-GAEVKKPGSSVKVSCTTSG-GTFSS-----FVINWMRQAPGQGLGWRGGIMPV---
 -EVQLLES-GGGLVQPGGSLRLSCAGSG-FTFSS-----YAMSWVRQTPGKGLEWVSVISGS---
