@@ -119,7 +119,7 @@ $ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt
 
 To evaluate sequence scores by using a saved model:
 ```bash
-> python ablstm.py eval ./data/sample/human_test.txt ./saved_models/tmp/model_tmp.npy ./results/result_human_test.txt
+$ python ablstm.py eval ./data/sample/human_test.txt ./saved_models/tmp/model_tmp.npy ./results/result_human_test.txt
 ```
 
 ## <a name="documentation"></a>Documentation
