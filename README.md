@@ -41,7 +41,7 @@ vld_fn = './data/sample/human_val.txt'
 model.fit(trn_fn=trn_fn, vld_fn=vld_fn, n_epoch=10, trn_batch_size=128, vld_batch_size=512, lr=.002, save_fp=None)
 ```
 
-To score the testing sequences:
+To score sequences:
 ```python3
 tst_fn = './data/sample/human_test.txt'
 tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
