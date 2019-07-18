@@ -37,7 +37,7 @@ Here provides an example:
 -QVQLQES-GPGLMKPSGTLSLTCDVSG-ASISN----TNWWGWVRQPPGLGLEWIGEIHH----
 ```
 
-### Call within your Python script
+### Call within Python script
 
 To initialize model:
 ```python3
