@@ -16,6 +16,10 @@ The tool was developped based on the following dependencies:
 
 Please note that the dependencies may require Python 3.6 or greater. It is recommemded to install and maintain all packages by using [`conda`](https://www.anaconda.com/) or [`pip`](https://pypi.org/project/pip/). For the installation of GPU accelerated PyTorch, additional effort may be required. Please check the official websites of [PyTorch](https://pytorch.org/get-started/locally/) and [CUDA](https://developer.nvidia.com/cuda-downloads) for detailed instructions.
 
+### Installation
+
+This is a lightweight tool targetting the specific problem of antibody nativeness quantification, thus no sophisticated installation routine is required. All you need is to place it into your project repository and import at need. If you want to put it somewhere else, please check out [importlib](https://docs.python.org/3/library/importlib.html) module.
+
 ## How to use
 
 These instructions will help you properly configure and use the tool either through function-call or command-line. For detailed usage of the parameters, you may refer to [Documentation](#documentation) section.
