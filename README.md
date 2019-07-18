@@ -138,7 +138,7 @@ Parameters:
 >> Batch size during training. `-1` means whole batch.
 5. `vld_batch_size`: *str, default is 512*
 >> Batch size during validation. `-1` means whole batch.
-6. `lr`: *float, default is 0.02*
+6. `lr`: *float, default is 0.002*
 >> Learning rate. The fitting process uses Adam algorithm for optimization.
 7. `save_fp`: *str, optional, default is None*
 >> Path to save models. `None` or `""` means training without saving. If a valid path is given, model will be saved under the path after each epoch as long as the validation performance is better than the past.
