@@ -69,8 +69,9 @@ model_loaded.load(fn='./saved_models/tmp/model_tmp.npy')
 
 #### Configuration XML
 
-Since neural network may have numerous parameters to configure, it may appear excessively verbose if we pass all of them by commands. Most of the model parameters, therefore, are stored within `<project_root>/ablstm.config` in XML format. The structure and the tag names exactly follow their corresponding Python class definition. Here is a sample XML configuration file.
+Since neural network may have numerous parameters to configure, it may appear excessively verbose if we pass all of them by commands. Most of the model parameters, therefore, are stored within `<project_root>/ablstm.config` in XML format. The structure and the tag names exactly follow their corresponding Python class definition.
 
+Here is a sample configuration XML file.
 ```xml
 <?xml version="1.0"?>
 <ablstm>
