@@ -28,7 +28,8 @@ These instructions will help you properly configure and use the tool either thro
 
 All antibody protein sequences must be stored in plain-text format. A sequence consists of 20 amino acid symbol letters along with `"-"` to indicate gap. Sequences are deliminated by one single line-break. Please do not include spaces or extra line-breaks. You can find sample data files under `<tool_root>/data/sample/`
 
-**Example**
+#### Example
+
 Here provides an example:
 ```
 -QVQLVQS-GAEVKKPGSSVKVSCTTSG-GTFSS-----FVINWMRQAPGQGLGWRGGIMPV---
@@ -206,7 +207,7 @@ Returns:
 
 ### Command line
 
-**`fit` manuel**
+#### `fit` manuel
 ```bash
 usage: ablstm.py fit [-h] [-l L] [-c C] [-d D] TRN_FN VLD_FN SAVE_FP
 
@@ -222,7 +223,7 @@ optional arguments:
   -d D        device (default: "cpu")
 ```
 
-**`eval` manuel**
+#### `eval` manuel**
 ```bash
 usage: ablstm.py eval [-h] [-c C] [-d D] TST_FN MDL_FN SCR_FN
 
