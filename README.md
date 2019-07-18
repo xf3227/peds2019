@@ -189,22 +189,6 @@ Returns:
 ### Command line
 
 **`fit` manuel**
-
-```bash
-usage: ablstm.py eval [-h] [-c C] [-d D] TST_FN MDL_FN SCR_FN
-
-positional arguments:
-  TST_FN      evaluation data file
-  MDL_FN      model file to load
-  SCR_FN      file to save scores
-
-optional arguments:
-  -h, --help  show this help message and exit
-  -c C        configuration XML file (default: "./ablstm.config")
-  -d D        device (default: "cpu")
-```
-
-**`eval` manuel**
 ```bash
 usage: ablstm.py fit [-h] [-l L] [-c C] [-d D] TRN_FN VLD_FN SAVE_FP
 
@@ -216,6 +200,21 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
   -l L        model file to load (default: "")
+  -c C        configuration XML file (default: "./ablstm.config")
+  -d D        device (default: "cpu")
+```
+
+**`eval` manuel**
+```bash
+usage: ablstm.py eval [-h] [-c C] [-d D] TST_FN MDL_FN SCR_FN
+
+positional arguments:
+  TST_FN      evaluation data file
+  MDL_FN      model file to load
+  SCR_FN      file to save scores
+
+optional arguments:
+  -h, --help  show this help message and exit
   -c C        configuration XML file (default: "./ablstm.config")
   -d D        device (default: "cpu")
 ```
