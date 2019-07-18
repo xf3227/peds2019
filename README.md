@@ -58,14 +58,14 @@ tst_fn = './data/sample/human_test.txt'
 tst_scores = model.eval(fn=human_tst_fn, batch_size=512)
 ```
 
-To save & load:
+To save & load model:
 ```python3
 model.save(fn='./saved_models/tmp/model_tmp.npy')
 model_loaded = ModelLSTM()
 model_loaded.load(fn='./saved_models/tmp/model_tmp.npy')
 ```
 
-### Call via commands
+### Call via command-line
 
 #### Configuration XML
 
