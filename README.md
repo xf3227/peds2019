@@ -223,7 +223,7 @@ optional arguments:
   -d D        device (default: "cpu")
 ```
 
-#### `eval` manuel**
+#### `eval` manuel
 ```bash
 usage: ablstm.py eval [-h] [-c C] [-d D] TST_FN MDL_FN SCR_FN
 
@@ -240,7 +240,7 @@ optional arguments:
 
 ## Authors
 
-* **Chonghua Xue** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Chonghua Xue** - cxue2@bu.edu
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
