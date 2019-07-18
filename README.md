@@ -233,9 +233,7 @@ optional arguments:
 
 ## Authors
 
-* **Chonghua Xue** - cxue2@bu.edu - Kolachalama laboratory, Boston University School of Medicine
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Chonghua Xue**, cxue2@bu.edu - Kolachalama laboratory, Boston University School of Medicine
 
 ## License
 
