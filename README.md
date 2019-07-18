@@ -26,6 +26,8 @@ These instructions will help you properly configure and use the tool either thro
 
 ### Function call
 
+Call within your Python script.
+
 #### Example
 
 To initialize model:
@@ -55,6 +57,8 @@ model_loaded.load(fn='./saved_models/tmp/model_tmp.npy')
 ```
 
 ### Command line
+
+Call via commands.
 
 #### Configuration XML
 
