@@ -162,7 +162,7 @@ Returns:
 > Assign device.
 
 Parameters:
-1. `device`: *str, default is "cpu"
+1. `device`: *str, default is "cpu"*
 >> Device to mount.
 
 #### `ablstm.ModelLSTM.save()`
