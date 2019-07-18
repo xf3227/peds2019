@@ -1,6 +1,6 @@
-# Quantifying the nativeness of antibody using LSTM
+# Quantifying the nativeness of antibody sequences using long short-term memory networks
 
-One Paragraph of project description goes here
+This work was recently accepted for publication in Protein Engineering Design & Selection (https://academic.oup.com/peds).
 
 ## Getting Started
 
@@ -233,7 +233,7 @@ optional arguments:
 
 ## Authors
 
-* **Chonghua Xue** - cxue2@bu.edu
+* **Chonghua Xue** - cxue2@bu.edu - Kolachalama laboratory, Boston University School of Medicine
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -243,6 +243,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Visterra Inc., Waltham, MA, USA
