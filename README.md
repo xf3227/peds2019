@@ -191,12 +191,12 @@ Parameters:
 Parameters:
 
 1. `fn`: *str*
-> Model file name.
+>> Model file name.
 
 Returns:
 
 1. `model`: *ablstm.ModelLSTM*
-> Loaded model.
+>> Loaded model.
 
 ### Command line
 
