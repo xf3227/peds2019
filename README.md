@@ -18,7 +18,7 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 
 ### Installation
 
-This is a lightweight tool targetting the specific problem of antibody nativeness quantification, thus no sophisticated installation routine is required. All you need is to place it into your project repository and import at need. If you want to put it somewhere else, please check out [importlib](https://docs.python.org/3/library/importlib.html) module for more flexible import capability.
+This is a lightweight project targetting the specific problem of antibody nativeness quantification, thus no sophisticated installation routine is required. All you need is to place it into your project repository and import at need. If you want to put it somewhere else, please check out [importlib](https://docs.python.org/3/library/importlib.html) module for more flexible import capability.
 
 ## How to use
 
@@ -98,7 +98,14 @@ To use a configuration file other than `<project_root>/ablstm.config`:
 $ python ablstm.py fit ./data/sample/human_train.txt ./data/sample/human_val.txt ./saved_models/tmp -c ./ablstm_new.config
 ```
 
+To evaluate sequence scores by using a saved model:
+```bash
+> python ablstm.py eval ./data/sample/human_test.txt ./saved_models/tmp/model_tmp.npy ./results/result_human_test.txt
+```
+
 ## <a name="documentation"></a>Documentation
+
+### Class methods
 
 #### `ablstm.ModelLSTM.__init__()`
 > Initializes an LSTM model with the given paramters.
@@ -178,6 +185,40 @@ Returns:
 
 1. `model`: *ablstm.ModelLSTM*
 > Loaded model.
+
+### Command line
+
+**`fit` manuel**
+
+```bash
+usage: ablstm.py eval [-h] [-c C] [-d D] TST_FN MDL_FN SCR_FN
+
+positional arguments:
+  TST_FN      evaluation data file
+  MDL_FN      model file to load
+  SCR_FN      file to save scores
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -c C        configuration XML file (default: "./ablstm.config")
+  -d D        device (default: "cpu")
+```
+
+**`eval` manuel**
+```bash
+usage: ablstm.py fit [-h] [-l L] [-c C] [-d D] TRN_FN VLD_FN SAVE_FP
+
+positional arguments:
+  TRN_FN      training data file
+  VLD_FN      validation data file
+  SAVE_FP     model save path
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -l L        model file to load (default: "")
+  -c C        configuration XML file (default: "./ablstm.config")
+  -d D        device (default: "cpu")
+```
 
 ## Contributing
 
