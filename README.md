@@ -18,7 +18,7 @@ Please note that the dependencies may require Python 3.6 or greater. It is recom
 
 ### Installation
 
-This is a lightweight tool targetting the specific problem of antibody nativeness quantification, thus no sophisticated installation routine is required. All you need is to place it into your project repository and import at need. If you want to put it somewhere else, please check out [importlib](https://docs.python.org/3/library/importlib.html) module.
+This is a lightweight tool targetting the specific problem of antibody nativeness quantification, thus no sophisticated installation routine is required. All you need is to place it into your project repository and import at need. If you want to put it somewhere else, please check out [importlib](https://docs.python.org/3/library/importlib.html) module for more flexible import capability.
 
 ## How to use
 
